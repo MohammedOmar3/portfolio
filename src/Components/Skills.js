@@ -18,7 +18,7 @@ const Skills = () => {
                 <motion.div className="experience-item" variants={fadeInUp} whileHover={{ scale:1.02 }}>
                     <div className="education">
                         <h4 className="skills-header"> Education</h4>
-                        <p>2020 - Present</p>
+                        <p>2018 - 2022</p>
                     </div>
                     <p className="university">Aston Univeristy - BSc Computer Science</p>
                     <div className="skills">

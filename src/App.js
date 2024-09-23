@@ -18,9 +18,9 @@ const App = () => {
       <Services></Services>
       <Resume></Resume>
       <Skills></Skills>
-      {/* <Testimonials></Testimonials>
+      <Testimonials></Testimonials>
       <Contact></Contact>
-      <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   )
 }
