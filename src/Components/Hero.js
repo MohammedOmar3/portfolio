@@ -28,9 +28,9 @@ const Hero = () => {
         <motion.section className='hero' initial='hidden' animate='visible' variants={fadeIn}>
             <motion.div className='hero-content' variants={scaleUp}>
                 <img src="/assets/hero.jpg" alt="Hero"></img>
+                <h1>Hi, I am Mohammed <br /> Welcome to my Portfolio</h1>
             </motion.div>
             <motion.div className='hero-item' variants={slideIn}>
-                <h1>Hi, I am Mohammed <br /> Welcome to my Portfolio</h1>
                 <div className="string">
                     <h4 className='specialize'>Specialize in</h4>
                     <ReactTyped
