@@ -14,13 +14,13 @@ const App = () => {
     <div className='App'>
       <Navbar></Navbar>
       <Hero></Hero>
-      <Works></Works>
+      {/* <Works></Works>
       <Services></Services>
       <Resume></Resume>
       <Skills></Skills>
       <Testimonials></Testimonials>
       <Contact></Contact>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </div>
   )
 }
