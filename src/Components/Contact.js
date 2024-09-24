@@ -34,14 +34,14 @@ const Contact = () => {
             </motion.form>
         </section>
 
-        <section id="company-logos" className='logos-section'>
+        {/* <section id="company-logos" className='logos-section'>
             <motion.h2 className='logos-header' variants={fadeIn} initial="hidden" whileInView="visible" viewPort={{ once: true, margin: '-50px' }}>
                 Our Partners
             </motion.h2>
             <motion.h2 className='logos-header' variants={fadeIn} initial="hidden" whileInView="visible" viewPort={{ once: true, margin: '-50px' }}>
                 <CompanyLogo />
             </motion.h2>
-        </section>
+        </section> */}
     </div>
   );
 }

@@ -55,7 +55,7 @@ const Works = () => {
         </motion.section>
 
         <motion.section ref={sectionRef2} initial="hidden" animate={isInView2 ? 'visible' : 'hidden'} variants={fadeIn}>
-            <div className="work2=container">
+            <div className="work2-container">
                 <motion.div className='left-column' variants={fadeIn}>
                     <div className="left-items">
                         <motion.div className='left-img' variants={fadeIn}>

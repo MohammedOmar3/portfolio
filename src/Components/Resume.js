@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import Avatar from '..//assets//avatar.png'
 
 const Resume = () => {
     const fadeIn = {
@@ -31,7 +32,7 @@ const Resume = () => {
                     </h4>
                     <div className="contact-links">
                         <div classname="contact-items">
-                            <a href="">o.mohammed3@hotmail.com</a>
+                            <a href="">o.mohammed3@hotmail.com <br /></a>
                             <a href="">LinkedIn.com/MohammedOmar</a>
                         </div>
 
@@ -43,7 +44,7 @@ const Resume = () => {
                 </motion.div>
 
                 <motion.div className="about-item" variants={fadeIn} initial={{ opacity: 0, x:50 }} animate={{ opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } }}>
-                    <img src="/assets/hero.jpg" alt="Profile of Mohammed Omar" />
+                    <img src={Avatar} alt="Profile of Mohammed Omar" />
                 </motion.div>
 
             </div>

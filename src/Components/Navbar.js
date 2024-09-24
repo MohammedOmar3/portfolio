@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Logo from '..//assets/logo.png'
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,8 +14,8 @@ const Navbar = () => {
   return (
     <div className='navbar'>
         <div className="logo">
-            <img src="/logo.png" alt="logo" className="App-logo" />
-            <a href="mailto:example.com?subject=Contact&body=Hello!">info@codewithmxmd.com</a>
+            <img src={Logo} alt="logo" className="App-logo" />
+            {/* <a href="mailto:example.com?subject=Contact&body=Hello!">info@codewithmxmd.com</a> */}
 
             <div className='menu'>
                 <button className="hamburger" onClick={toggleMenu}>
@@ -41,7 +42,7 @@ const Navbar = () => {
                         <a href='#contact' className='nav-link'>Contact</a>
                     </li>
 
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <motion.a 
                             href="/resume.pdf" 
                             download="Mohammed_Omar_CV.pdf"
@@ -53,7 +54,7 @@ const Navbar = () => {
                             Resume
                             <img src="download.png" alt="Download icon" className="resume-icon" />
                         </motion.a>
-                    </li>
+                    </li> */}
 
                 </ul>
 
