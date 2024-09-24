@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 
 :root {
-  --primary-color: #8570f7;
-  --secondary-color: #140c1c;
-  --text-oofwhite-color: #f6f3fc;
-  --grey-color: #d9d9d99d;
-  --body-grey: #dddddddd;
+  --primary-color: #708ff7;
+  --secondary-color: #ffffff;
+  --text-oofwhite-color: #000000;
+  --grey-color: #1d1d1d9d;
+  --body-grey: #000000dd;
   --font-size: 1.5rem;
 }
 
@@ -17,7 +17,7 @@ body {
   margin: 0;
   color: var(--body-grey);
   background-color: var(--secondary-color);
-  background-image: radial-gradient(circle at top right, hsla(264, 88%, 51%, 0.21) 0%, transparent 10%),
+  background-image: radial-gradient(circle at top right, hsla(221, 88%, 51%, 0.21) 0%, transparent 0%),
   url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50%" height="50%"><defs><pattern id="square-net" width="80" height="80" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="80" height="80" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="0.1"/></pattern></defs<rect width="100%" height="100%" fill="url(%23square-net)"/><svg>');
   background-repeat: no-repeat, repeat;
   background-size: cover;
@@ -83,8 +83,12 @@ body {
   text-align: center;
 }
 
+.nav-item a{
+  color: #000;
+}
+
 .nav-link {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s;
@@ -193,7 +197,6 @@ body {
   background-color: var(--secondary-color);
   height: auto;
   border-radius: 20px;
-  border: 1px solid hsla(255, 71%, 50%, 0.245);
 }
 
 .hero-content{
@@ -254,7 +257,7 @@ body {
 .hero-item h1 {
   font-size: clamp(3.0rem, 2.5vw, 5rem);
   margin: 0;
-  background: linear-gradient(90deg, #8570f7, #af90ed, #fff);
+  background: linear-gradient(90deg, #284480, #2f59e4, #fff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -280,7 +283,7 @@ body {
   justify-content: start;
   list-style: none;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   gap: 20px;
 }
 
@@ -295,7 +298,6 @@ body {
   text-decoration: none;
   color: var(--primary-color);
   overflow: hidden;
-  border: 1px solid var(--primary-color);
   position: relative;
 }
 
@@ -316,14 +318,14 @@ body {
 }
 
 .icon {
-  font-size: 1rem;
-  color: var(--primary-color);
+  font-size: 1.5rem;
+  color: black;
   transition: 0.5s ease;
   z-index: 2;
 }
 
 .item a:hover .icon {
-  color: #fff;
+  color: var(--primary-color);
   transform: rotateY(360deg);
 }
 
@@ -357,10 +359,11 @@ body {
   position: relative;
   top: 0px;
   border-radius: 20px;
-  padding: 50px 20px 20px;
+  padding: 70px 20px 70px;
   height: auto;
   background-color: var(--secondary-color);
-  border: 1px solid hsla(255, 71%, 50%, 0.245);
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
   z-index: -2;
 }
 
@@ -447,7 +450,8 @@ body {
   background-color: var(--secondary-color);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid hsla(255, 71%, 50%, 0.245);
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
 }
 
 .left-img img,
@@ -464,7 +468,8 @@ body {
   background-color: var(--secondary-color);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid hsla(255, 71%, 50%, 0.245);
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
 }
 
 .project-buttons {
@@ -526,7 +531,8 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
   background-color: var(--secondary-color);
-  border: 1px solid hsla(255, 71%, 50%, 0.245);
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
 }
 
 #services p {
@@ -604,7 +610,8 @@ body {
   width: 200px;
   height: 450px;
   overflow: hidden;
-  border: 1px solid var(--primary-color);
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
 }
 
 .contact-links {
@@ -750,7 +757,8 @@ body {
   text-align: center;
   padding: 20px;
   background-color: var(--primary-color);
-  border: 1px solid hsla(255, 71%, 50%, 0.245);
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
   border-radius: 10px;
   height: 250px;
   margin-bottom: 50px;
@@ -799,7 +807,8 @@ body {
   text-align: center;
   background-color: var(--secondary-color);
   border-radius: 10px;
-  border: 1px solid hsla(255, 71%, 50%, 0.245)
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--primary-color);
 }
 
 .contact-header {

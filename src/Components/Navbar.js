@@ -24,19 +24,16 @@ const Navbar = () => {
 
                 <ul className={`nav-list ${isMenuOpen ? 'show' : ''}`}>
                     <li className="nav-item">
-                        <a href='#services' className='nav-link'>Services</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href='#works' className='nav-link'>Works</a>
-                    </li>
-                    <li className="nav-item">
                         <a href='#resume' className='nav-link'>Resume</a>
                     </li>
                     <li className="nav-item">
                         <a href='#skills' className='nav-link'>Skills</a>
                     </li>
                     <li className="nav-item">
-                        <a href='#testimonials' className='nav-link'>Testimonials</a>
+                        <a href='#works' className='nav-link'>Works</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href='#blog' className='nav-link'>Blog</a>
                     </li>
                     <li className="nav-item">
                         <a href='#contact' className='nav-link'>Contact</a>
