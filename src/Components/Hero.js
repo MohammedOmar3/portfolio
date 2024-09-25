@@ -36,10 +36,9 @@ const Hero = () => {
                     <h4 className='specialize'>Specialize in</h4>
                     <ReactTyped
                         strings={[
-                            "Web Design",
+                            "Software Development",
                             "Web Development",
-                            "Digital Marketing",
-                            "UI/UX Design"
+                            "Graphic Designing",
                         ]}
                         typeSpeed={50}
                         backSpeed={30}
