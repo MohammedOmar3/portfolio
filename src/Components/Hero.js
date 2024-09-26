@@ -14,7 +14,7 @@ const Hero = () => {
   const generateXParticles = () => {
     const particles = Array.from({ length: 3 }).map(() => {
       const angle = Math.random() * 2 * Math.PI; // Random angle in radians
-      const distance = Math.random() * 100 + 50; // Random distance from the center
+      const distance = Math.random() * 150 + 100; // Increased random distance for larger fly-out
       return {
         x: Math.cos(angle) * distance,
         y: Math.sin(angle) * distance,
@@ -53,7 +53,7 @@ const Hero = () => {
               className="x-particle"
               initial={{ opacity: 1, x: 0, y: 0, rotate: 0 }}
               animate={{ x: particle.x, y: particle.y, rotate: particle.rotate, opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
               >
                 X
               </motion.div>
