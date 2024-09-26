@@ -13,15 +13,12 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-        <div className="logo">
-            <img src={Logo} alt="logo" className="App-logo" />
+            <div className="logo">
+                <img src={Logo} alt="logo" className="App-logo" />
+            </div>
             {/* <a href="mailto:example.com?subject=Contact&body=Hello!">info@codewithmxmd.com</a> */}
 
             <div className='menu'>
-                <button className="hamburger" onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="lg" />
-                </button>
-
                 <ul className={`nav-list ${isMenuOpen ? 'show' : ''}`}>
                     <li className="nav-item">
                         <a href='#resume' className='nav-link'>Resume</a>
@@ -56,8 +53,6 @@ const Navbar = () => {
                 </ul>
 
             </div>
-
-        </div>
     </div>
   )
 }

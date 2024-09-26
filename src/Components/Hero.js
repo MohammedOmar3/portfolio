@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CountUp from 'react-countup';
 import { ReactTyped } from 'react-typed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faArrowRight, faTrophy, faBriefcase, faUsers, faFolder } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faFacebook, faGithub, faXTwitter, faLinkedin, faHashnode } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight, faTrophy, faBriefcase, faUsers, faFolder, faBlog } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import Avatar from '..//assets//avatar.png'
 
 const Hero = () => {
+    const [xParticles, setXParticles] = useState([]);
+
+  // Function to create random X's positions
+  const generateXParticles = () => {
+    const particles = Array.from({ length: 3 }).map(() => {
+      const angle = Math.random() * 2 * Math.PI; // Random angle in radians
+      const distance = Math.random() * 100 + 50; // Random distance from the center
+      return {
+        x: Math.cos(angle) * distance,
+        y: Math.sin(angle) * distance,
+        rotate: Math.random() * 360, // Random rotation
+      };
+    });
+    setXParticles(particles);
+    setTimeout(() => setXParticles([]), 1000); // Clear the particles after 1 second
+  };
 
     const fadeIn = {
         hidden: {opacity: 0, y: 20},
@@ -28,7 +44,21 @@ const Hero = () => {
     <div>
         <motion.section className='hero' initial='hidden' animate='visible' variants={fadeIn}>
             <motion.div className='hero-content' variants={scaleUp}>
-                <img src={Avatar} alt="Hero"></img>
+            <div className="hero-image-container" onClick={generateXParticles}>
+            <img src={Avatar} alt="Hero" />
+            {/* X particles */}
+            {xParticles.map((particle, index) => (
+              <motion.div
+              key={index}
+              className="x-particle"
+              initial={{ opacity: 1, x: 0, y: 0, rotate: 0 }}
+              animate={{ x: particle.x, y: particle.y, rotate: particle.rotate, opacity: 0 }}
+              transition={{ duration: 1, ease: 'easeOut' }}
+              >
+                X
+              </motion.div>
+            ))}
+          </div>
             </motion.div>
             <motion.div className='hero-item' variants={slideIn}>
                 <h1>Hi, I am Mohammed <br /> Welcome to my Portfolio</h1>
@@ -57,23 +87,23 @@ const Hero = () => {
                     <motion.div className='wrapper' variants={fadeIn}>
                         <ul>
                             <li className='item'>
-                                <a href='#' aria-label='Instagram'>
-                                    <FontAwesomeIcon icon={faInstagram} className='icon' />
+                                <a href='https://www.linkedin.com/in/mohammed-omar-a03b42222/' target="_blank" aria-label='LinkedIn'>
+                                    <FontAwesomeIcon icon={faLinkedin} className='icon' />
                                 </a>
                             </li>
                             <li className='item'>
-                                <a href='#' aria-label='Facebook'>
-                                    <FontAwesomeIcon icon={faFacebook} className='icon' />
-                                </a>
-                            </li>
-                            <li className='item'>
-                                <a href='#' aria-label='X'>
-                                    <FontAwesomeIcon icon={faXTwitter} className='icon' />
-                                </a>
-                            </li>
-                            <li className='item'>
-                                <a href='#' aria-label='Github'>
+                                <a href='https://github.com/MohammedOmar3' target="_blank" aria-label='Github'>
                                     <FontAwesomeIcon icon={faGithub} className='icon' />
+                                </a>
+                            </li>
+                            <li className='item'>
+                                <a href='https://omohammed.hashnode.dev/' target="_blank" aria-label='Hashnode'>
+                                    <FontAwesomeIcon icon={faHashnode} className='icon' />
+                                </a>
+                            </li>
+                            <li className='item'>
+                                <a href='https://github.com/MohammedOmar3' target="_blank" aria-label='Github'>
+                                    <FontAwesomeIcon icon={faXTwitter} className='icon' />
                                 </a>
                             </li>
                         </ul>

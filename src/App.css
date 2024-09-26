@@ -32,22 +32,23 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  padding: 30px 0 50px;
+  justify-content: space-between;
+  padding: 50px 0 50px;
+  margin-left: 50px;
   z-index: 1000;
+  width: 100%;
 }
 
 .logo {
   display: flex;
-  align-items: right;
+  align-items: center;
 }
 
 .App-logo {
   width: 150px;
 }
 
-.logo a{
+.menu a{
   margin: 0;
   padding: 10px 20px;
   border: none;
@@ -59,15 +60,14 @@ body {
   transition: color 0.3s ease;
 }
 
-.logo a:hover {
-  color: var(--primary-color)
+.menu a:hover {
+  color: var(--primary-color);
+  font-weight: 800;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
 }
 
 .nav-list {
@@ -92,30 +92,6 @@ body {
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s;
-}
-
-.resume-button{
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  font-size: var(--font-size);
-  color: #fff;
-  background-color: var(--primary-color);
-  border: none;
-  gap: 10px;
-  border-radius: 50px;
-  text-decoration: none;
-  width: 60%;
-  transition: background-color 0.3s ease;
-}
-
-.resume-button:hover {
-  background-color: #2339fc;
-}
-
-.resume-icon {
-  width: 20px;
-  margin-right: 8px;
 }
 
 .hamburger {
@@ -210,7 +186,38 @@ body {
 .hero-content img{
   width: 500px;
   height: 500px;
-  border-radius: 15%;
+  border-top-left-radius: 35%;
+  border-top-right-radius: 65%;
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 55%;
+  box-shadow: 12px 20px 20px rgba(0, 0, 0, 0.0);
+}
+
+.hero-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image-container img {
+  width: 500px;
+  height: 500px;
+  border-top-left-radius: 35%;
+  border-top-right-radius: 65%;
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 55%;
+  position: relative;
+  z-index: 1;
+}
+
+.x-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;  /* Make it bigger for visibility */
+  color: rgb(0, 119, 255);  /* Change color as needed */
+  font-weight: bold;
+  transform: translate(-50%, -50%);  /* Center the X */
+  z-index: 10;  /* Ensure it appears above the image */
 }
 
 .hero-item {
@@ -361,9 +368,9 @@ body {
   border-radius: 20px;
   padding: 70px 20px 70px;
   height: auto;
-  background-color: var(--secondary-color);
-  border-top: 5px solid var(--primary-color);
-  border-bottom: 5px solid var(--primary-color);
+  background-color: #f5f5f5;
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   z-index: -2;
 }
 
@@ -447,11 +454,11 @@ body {
 
 .left-column {
   flex: 1;
-  background-color: var(--secondary-color);
+  background-color: #f5f5f5;
   padding: 20px;
   border-radius: 8px;
-  border-top: 5px solid var(--primary-color);
-  border-bottom: 5px solid var(--primary-color);
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .left-img img,
@@ -465,11 +472,11 @@ body {
 
 .right-column {
   flex: 1;
-  background-color: var(--secondary-color);
+  background-color: #f5f5f5;
   padding: 20px;
   border-radius: 8px;
-  border-top: 5px solid var(--primary-color);
-  border-bottom: 5px solid var(--primary-color);
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .project-buttons {
@@ -530,9 +537,7 @@ body {
   height: auto;
   margin-top: 100px;
   margin-bottom: 100px;
-  background-color: var(--secondary-color);
-  border-top: 5px solid var(--primary-color);
-  border-bottom: 5px solid var(--primary-color);
+  background-color: #ffffff;
 }
 
 #services p {
@@ -583,6 +588,103 @@ body {
   .service-container{
     grid-template-columns: 1fr;
   }
+}
+
+.timeline-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #ddd;
+  z-index: 1;
+  transform: translateY(-50%); /* Ensures the line is exactly centered */
+}
+
+.timeline {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 80%;
+  z-index: 2; /* Above the line */
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.timeline-item .timeline-date {
+  margin-bottom: 20px; /* Add margin to position date above the line */
+  font-size: 16px;
+  color: #555; /* Date text color */
+}
+
+.timeline-date {
+  position: absolute;
+}
+
+.timeline-item .timeline-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  top: 3px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 3; /* Circles should be above the line */
+  margin-top: 0px; /* Fine-tuned to ensure circles are perfectly aligned with the line */
+}
+
+.timeline-item.active .timeline-circle {
+  background-color: #007BFF; /* Active circle color */
+  transform: scale(1.2); /* Scale effect for active item */
+  transform-origin: center; /* Ensures the scaling happens from the center */
+  position: relative;
+}
+
+.timeline-item:hover .timeline-circle {
+  background-color: #007BFF;
+}
+
+.timeline-item .timeline-circle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #007BFF;
+  border-radius: 50%;
+}
+
+.timeline-item.active .timeline-date {
+  font-weight: bold;
+  color: #007BFF; /* Active date color */
+}
+
+/* Odd items (display above the line) */
+.timeline-item:nth-child(odd) .timeline-date {
+  top: -40px; /* Position above the timeline circle */
+}
+
+/* Even items (display below the line) */
+.timeline-item:nth-child(even) .timeline-date {
+  top: 40px; /* Position below the timeline circle */
 }
 
 .about {
