@@ -14,7 +14,7 @@ const Hero = () => {
   const generateXParticles = () => {
     const particles = Array.from({ length: 3 }).map(() => {
       const angle = Math.random() * 2 * Math.PI; // Random angle in radians
-      const distance = Math.random() * 150 + 100; // Increased random distance for larger fly-out
+      const distance = Math.random() * 250 + 250; // Increased random distance for larger fly-out
       return {
         x: Math.cos(angle) * distance,
         y: Math.sin(angle) * distance,
@@ -22,7 +22,7 @@ const Hero = () => {
       };
     });
     setXParticles(particles);
-    setTimeout(() => setXParticles([]), 1000); // Clear the particles after 1 second
+    setTimeout(() => setXParticles([]), 2000); // Clear the particles after 1 second
   };
 
     const fadeIn = {
@@ -55,7 +55,7 @@ const Hero = () => {
               animate={{ x: particle.x, y: particle.y, rotate: particle.rotate, opacity: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
               >
-                X
+                x
               </motion.div>
             ))}
           </div>

@@ -213,8 +213,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 2rem; /* Adjust as needed */
-  color: red; /* Change color as needed */
+  font-size: 5rem; /* Adjust as needed */
+  color: rgb(0, 81, 255); /* Change color as needed */
   font-weight: bold;
   transform: translate(-50%, -50%); /* Center the X */
   z-index: 0; /* Ensure it appears behind the image */
