@@ -10,3 +10,5 @@ Timeline of journey
 Resume
 Projects
 Blog
+
+Contact will need to be functional as it currently doesn't forward me any messages filled in.
